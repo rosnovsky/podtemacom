@@ -30,11 +30,17 @@ class BlogIndex extends React.Component {
                 </Link>
               </h3>
               <small>{node.frontmatter.date}</small>
+              <audio src={node.frontmatter.audioUrl} />
               <p
                 dangerouslySetInnerHTML={{
-                  __html: node.frontmatter.description || node.excerpt,
+                  __html: `<img src="${node.frontmatter.cover.publicURL}" /><br/><audio
+                  style=
+                    "width: 100%;"
+                  preload="true"
+                  controls src="${node.frontmatter.audioUrl}" /><br/>`
                 }}
               />
+              <p>{node.frontmatter.description || node.excerpt}</p>
             </div>
           )
         })}
@@ -63,6 +69,8 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             title
             description
+            cover {publicURL}
+            audioUrl
           }
         }
       }

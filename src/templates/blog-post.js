@@ -35,7 +35,12 @@ class BlogPostTemplate extends React.Component {
         >
           {post.frontmatter.date}
         </p>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <div dangerouslySetInnerHTML={{ __html: `<img src="${post.frontmatter.cover.publicURL}" /><br/><audio
+                  style=
+                    "width: 100%;"
+                  preload="true"
+                  controls src="${post.frontmatter.audioUrl}" /><br/>` }} />
+        <p dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr
           style={{
             marginBottom: rhythm(1),
@@ -90,6 +95,8 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        cover {publicURL}
+        audioUrl
       }
     }
   }
