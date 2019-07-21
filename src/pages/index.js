@@ -29,8 +29,7 @@ class BlogIndex extends React.Component {
                   {title}
                 </Link>
               </h3>
-              <small>{node.frontmatter.date}</small>
-              <audio src={node.frontmatter.audioUrl} />
+              <small>{Intl.DateTimeFormat('ru-RU', { year: 'numeric', month: 'long', day: 'numeric' }).format(new Date(node.frontmatter.date))}</small>
               <p
                 dangerouslySetInnerHTML={{
                   __html: `<img src="${node.frontmatter.cover.publicURL}" /><br/><audio
@@ -71,6 +70,7 @@ export const pageQuery = graphql`
             description
             cover {publicURL}
             audioUrl
+            type
           }
         }
       }

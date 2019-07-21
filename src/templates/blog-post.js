@@ -33,7 +33,7 @@ class BlogPostTemplate extends React.Component {
             marginBottom: rhythm(1),
           }}
         >
-          {post.frontmatter.date}
+          <em>{Intl.DateTimeFormat('ru-RU', { year: 'numeric', month: 'long', day: 'numeric' }).format(new Date(post.frontmatter.date))}</em>
         </p>
         <div dangerouslySetInnerHTML={{ __html: `<img src="${post.frontmatter.cover.publicURL}" /><br/><audio
                   style=
