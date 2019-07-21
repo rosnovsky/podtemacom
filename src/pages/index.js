@@ -70,7 +70,6 @@ export const pageQuery = graphql`
             description
             cover {publicURL}
             audioUrl
-            type
           }
         }
       }
