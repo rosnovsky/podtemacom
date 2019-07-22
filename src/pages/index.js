@@ -30,16 +30,16 @@ class BlogIndex extends React.Component {
                 </Link>
               </h3>
               <small>{Intl.DateTimeFormat('ru-RU', { year: 'numeric', month: 'long', day: 'numeric' }).format(new Date(node.frontmatter.date))}</small>
-              <p
+              <div
                 dangerouslySetInnerHTML={{
-                  __html: `<img src="${node.frontmatter.cover.publicURL}" /><br/><audio
+                  __html: node.frontmatter.audioUrl ? `<img src="${node.frontmatter.cover.publicURL}" /><br/><audio
                   style=
                     "width: 100%;"
                   preload="true"
-                  controls src="${node.frontmatter.audioUrl}" /><br/>`
-                }}
+                  controls src="${node.frontmatter.audioUrl}" /><br/>` : `<img src="${node.frontmatter.cover.publicURL}" /><br/>`
+                }} />
+                <p dangerouslySetInnerHTML={{__html: node.frontmatter.description || node.html }}
               />
-              <p>{node.frontmatter.description || node.excerpt}</p>
             </div>
           )
         })}

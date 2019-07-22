@@ -35,12 +35,12 @@ class BlogPostTemplate extends React.Component {
         >
           <em>{Intl.DateTimeFormat('ru-RU', { year: 'numeric', month: 'long', day: 'numeric' }).format(new Date(post.frontmatter.date))}</em>
         </p>
-        <div dangerouslySetInnerHTML={{ __html: `<img src="${post.frontmatter.cover.publicURL}" /><br/><audio
+        <div dangerouslySetInnerHTML={{ __html: post.frontmatter.audioUrl ?`<img src="${post.frontmatter.cover.publicURL}" /><br/><audio
                   style=
                     "width: 100%;"
                   preload="true"
-                  controls src="${post.frontmatter.audioUrl}" /><br/>` }} />
-        <p dangerouslySetInnerHTML={{ __html: post.html }} />
+                  controls src="${post.frontmatter.audioUrl}" /><br/>` : `<img src="${post.frontmatter.cover.publicURL}" /><br/>` }} />
+        <p dangerouslySetInnerHTML= {{ __html: post.html}} />
         <hr
           style={{
             marginBottom: rhythm(1),
