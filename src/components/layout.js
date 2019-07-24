@@ -1,11 +1,27 @@
 import React from "react"
 import { Link } from "gatsby"
+import Pagination from "../components/pagination";
 
 import { rhythm, scale } from "../utils/typography"
 
 class Layout extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      pageOfItems: [],
+      items: this.props.children[2],
+    }
+    this.onChangePage = this.onChangePage.bind(this);
+  }
+  
+  onChangePage(pageOfItems) {
+    // update state with new page of items
+    this.setState({ pageOfItems: pageOfItems });
+  }
+
   render() {
     const { location, title, children } = this.props
+    const { pageOfItems } = this.state;
     const rootPath = `${__PATH_PREFIX__}/`
     let header
 
@@ -52,6 +68,7 @@ class Layout extends React.Component {
       )
     }
     return (
+      <>
       <div
         style={{
           marginLeft: `auto`,
@@ -61,13 +78,20 @@ class Layout extends React.Component {
         }}
       >
         <header>{header}</header>
-        <main>{children}</main>
+        <main>{pageOfItems}
+        <Pagination items={this.state.items} onChangePage={this.onChangePage} /><br />
+        </main>
+        <br />
+        <div>
         <footer>
-          © 2006-{new Date().getFullYear()}
-          {` `}
-          <a href="https://rosnovsky.us">Rosnovsky Park™</a>
-        </footer>
+      © 2006-{new Date().getFullYear()}
+      {` `}
+      <a href="https://rosnovsky.us">Rosnovsky Park™</a>
+    </footer>
+        </div>
       </div>
+      
+    </>
     )
   }
 }

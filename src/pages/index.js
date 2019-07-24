@@ -6,11 +6,20 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
 
+
 class BlogIndex extends React.Component {
+  constructor(){
+    super();
+    this.state = {
+      pageOfItems: []
+    }
+  }
   render() {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
     const posts = data.allMarkdownRemark.edges
+
+
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
