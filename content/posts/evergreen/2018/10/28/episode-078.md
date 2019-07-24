@@ -3,7 +3,7 @@ title: "Episode #078"
 date: "2018-10-28T22:12:03.284Z"
 cover: UNADJUSTEDNONRAW_thumb_8016.jpg
 description: О получении гражданства США, о работе, о поездке в Сан-Франциско, и о музыке.
-audioUrl: https://podtema.blob.core.windows.net/evergreen/evergreen078.mp3
+audioUrl: https://evergreen-podcast.s3-us-west-2.amazonaws.com/evergreen078.mp3
 ---
 
 Спасибо [патронам](https://patreon.com/podtema)!

@@ -3,7 +3,7 @@ title: "Episode #082"
 date: "2019-02-27T22:12:03.284Z"
 cover: IMG_4190.jpeg
 description: Снежный конец света, ЧП с водопроводом, о будущем, про книжки и Госдеп.
-audioUrl: https://podtema.blob.core.windows.net/evergreen/evergreen082.mp3
+audioUrl: https://evergreen-podcast.s3-us-west-2.amazonaws.com/evergreen082.mp3
 ---
 
 Спасибо, [патроны](https://patreon.com/podtema)!

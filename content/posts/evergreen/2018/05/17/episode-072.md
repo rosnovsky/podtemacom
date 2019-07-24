@@ -3,7 +3,7 @@ title: "Episode #072"
 date: "2018-05-17T22:12:03.284Z"
 cover: IMG_1913.jpg
 description: Поездка в Канаду, хроника ноги и крутейший концерт P!ink!
-audioUrl: https://podtema.blob.core.windows.net/evergreen/evergreen072.mp3
+audioUrl: https://evergreen-podcast.s3-us-west-2.amazonaws.com/evergreen072.mp3
 ---
 
 [Патроны](https://patreon.com/podtema)!

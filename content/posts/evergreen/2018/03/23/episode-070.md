@@ -3,7 +3,7 @@ title: "Episode #070"
 date: "2018-03-23T22:12:03.284Z"
 cover: IMG_1133.jpg
 description: Подкаст о том, как я сломал ногу.
-audioUrl: https://podtema.blob.core.windows.net/evergreen/evergreen070.mp3
+audioUrl: https://evergreen-podcast.s3-us-west-2.amazonaws.com/evergreen070.mp3
 ---
 
 ## Пожалуйста, поддержите подкаст

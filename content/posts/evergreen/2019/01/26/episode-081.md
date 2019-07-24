@@ -3,7 +3,7 @@ title: "Episode #081"
 date: "2019-01-26T22:12:03.284Z"
 cover: IMG_4113.jpeg
 description: Новый год, конец футбольного сезона, поездка на острова, квартирный вопрос и налоги.
-audioUrl: https://podtema.blob.core.windows.net/evergreen/evergreen081.mp3
+audioUrl: https://evergreen-podcast.s3-us-west-2.amazonaws.com/evergreen081.mp3
 ---
 
 Спасибо [патронам](https://patreon.com/podtema)!
