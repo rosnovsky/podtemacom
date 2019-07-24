@@ -5,27 +5,34 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
-
+import Pagination from "../components/pagination";
 
 class BlogIndex extends React.Component {
-  constructor(){
-    super();
+  constructor(props){
+    super(props);
+    const { data } = this.props
     this.state = {
-      pageOfItems: []
+      pageOfItems: [],
+      items: data.allMarkdownRemark.edges
     }
+    this.onChangePage = this.onChangePage.bind(this);
   }
+  
+  onChangePage(pageOfItems) {
+    // update state with new page of items
+    this.setState({ pageOfItems: pageOfItems });
+  }
+
   render() {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
-    const posts = data.allMarkdownRemark.edges
-
-
+    const { pageOfItems } = this.state;
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title="All posts" />
         <Bio />
-        {posts.map(({ node }) => {
+        {pageOfItems.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
           return (
             <div key={node.fields.slug}>
@@ -52,6 +59,11 @@ class BlogIndex extends React.Component {
             </div>
           )
         })}
+        <div>
+          <Pagination style={{margin: "0 auto"}} items={this.state.items} onChangePage={this.onChangePage} />
+          <br />
+          <br />
+        </div>
       </Layout>
     )
   }
