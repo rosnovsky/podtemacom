@@ -3,7 +3,7 @@ title: "Episode #073"
 date: "2018-06-10T22:12:03.284Z"
 cover: Uca2MEtQK2O1avOYhyKdA.jpg
 description: Большой и разный эпизод подкаста обо всем на свете, он хроники ноги и велосипеда, до кемпинга, кино и футбола.
-audioUrl: https://evergreen-podcast.s3-us-west-2.amazonaws.com/evergreen073.mp3
+audioUrl: https://podtema.com/media/evergreen/evergreen073.mp3
 ---
 
     

@@ -3,7 +3,7 @@ title: "Episode #062"
 date: "2017-07-23"
 cover: IMG_0042-1.jpg
 description: Парашютирование Ленки, Diablo Lake, RIP Chester Bennington, Camp Namanu.
-audioUrl: https://evergreen-podcast.s3-us-west-2.amazonaws.com/evergreen062.mp3
+audioUrl: https://podtema.com/media/evergreen/evergreen062.mp3
 ---
 
 - Ленка и парашют

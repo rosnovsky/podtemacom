@@ -3,7 +3,7 @@ title: "Episode #075"
 date: "2018-07-26T22:12:03.284Z"
 cover: fullsizeoutput_21f2.jpeg
 description: Фестивали, фейерверки, велосипед, кемпинг, все как мы любим.
-audioUrl: https://evergreen-podcast.s3-us-west-2.amazonaws.com/evergreen075.mp3
+audioUrl: https://podtema.com/media/evergreen/evergreen075.mp3
 ---
 
 [Вступить в патроны!](https://patreon.com/podtema)

@@ -3,7 +3,7 @@ title: "Episode #076"
 date: "2018-08-30T22:12:03.284Z"
 cover: DJI_0006.jpg
 description: Крутое путешествие на юг, летний лагерь, велосипеды, дроны и вот это всё.
-audioUrl: https://evergreen-podcast.s3-us-west-2.amazonaws.com/evergreen076.mp3
+audioUrl: https://podtema.com/media/evergreen/evergreen076.mp3
 ---
 
 Подкаст выходит благодаря [патронам](https://patreon.com/podtema). Вступай!

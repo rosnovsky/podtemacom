@@ -3,7 +3,7 @@ title: "Episode #071"
 date: "2018-04-24T22:12:03.284Z"
 cover: IMG_1817.jpg
 description: Как дела с ногой, что там с работой, о кино и о рассылке.
-audioUrl: https://evergreen-podcast.s3-us-west-2.amazonaws.com/evergreen071.mp3
+audioUrl: https://podtema.com/media/evergreen/evergreen071.mp3
 ---
 
 - Новости Ноги:

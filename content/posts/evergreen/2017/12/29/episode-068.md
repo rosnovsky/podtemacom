@@ -3,7 +3,7 @@ title: "Episode #068"
 date: "2017-12-29T22:12:03.284Z"
 cover: IMG_0313-1.jpg
 description: Подводим итоги года
-audioUrl: https://evergreen-podcast.s3-us-west-2.amazonaws.com/evergreen068.mp3
+audioUrl: https://podtema.com/media/evergreen/evergreen068.mp3
 ---
 
 

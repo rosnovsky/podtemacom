@@ -3,7 +3,7 @@ title: "Episode #080"
 date: "2018-12-29T22:12:03.284Z"
 cover: qMmayKLtSadSW3Ewzw8pg_thumb_929d.jpg
 description: Сходил в гости к коллеге-подкастеру. Большая международная встреча патронов подкаста, и о кино.
-audioUrl: https://evergreen-podcast.s3-us-west-2.amazonaws.com/evergreen080.mp3
+audioUrl: https://podtema.com/media/evergreen/evergreen080.mp3
 ---
 
 Спасибо, [патроны](https://patreon.com/podtema)!

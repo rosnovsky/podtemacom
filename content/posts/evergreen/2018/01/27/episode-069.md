@@ -3,7 +3,7 @@ title: "Episode #069"
 date: "2018-01-27T22:12:03.284Z"
 cover: IMG_0430.jpg
 description: Новый год, гости, футбол и марш протеста. Год начинается как надо!
-audioUrl: https://evergreen-podcast.s3-us-west-2.amazonaws.com/evergreen069.mp3
+audioUrl: https://podtema.com/media/evergreen/evergreen069.mp3
 ---
 
 [Стань патроном!](https://patreon.com/podtema)

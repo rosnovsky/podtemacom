@@ -3,7 +3,7 @@ title: "Episode #079"
 date: "2018-11-18T22:12:03.284Z"
 cover: IMG_2626.jpg
 description: О получении гражданства США, о работе, о поездке в Сан-Франциско, и о музыке.
-audioUrl: https://evergreen-podcast.s3-us-west-2.amazonaws.com/evergreen079.mp3
+audioUrl: https://podtema.com/media/evergreen/evergreen079.mp3
 ---
 
 Спасибо [патронам](https://patreon.com/podtema)

@@ -3,7 +3,7 @@ title: "Вечнозелёная капуста #074"
 date: "2018-06-23T22:12:03.284Z"
 cover: foodism360-397360-unsplash-e1529883646607.jpg
 description: Юбилейный, легендарный и исторический выпуск подкаста “Вечнозелёная Капуста”...
-audioUrl: https://evergreen-podcast.s3-us-west-2.amazonaws.com/evergreen074.mp3
+audioUrl: https://podtema.com/media/evergreen/evergreen074.mp3
 ---
 
 Юбилейный, легендарный и исторический выпуск подкаста “Вечнозелёная Капуста”.

@@ -3,7 +3,7 @@ title: "Episode #083"
 date: "2019-03-30T22:12:03.284Z"
 cover: ice-cream.jpg
 description: Акция для друзей подкаста, как закончился последний проект, концерты, о школе, и многое другое! 
-audioUrl: https://evergreen-podcast.s3-us-west-2.amazonaws.com/evergreen083.mp3
+audioUrl: https://podtema.com/media/evergreen/evergreen083.mp3
 ---
 
 

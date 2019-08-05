@@ -3,7 +3,7 @@ title: "Episode #067"
 date: "2017-11-24T22:12:03.284Z"
 cover: IMG_0745.jpg
 description: Великое Всеамериканское Полное Солнечное Затмение 2017 (и по мелочи)
-audioUrl: https://evergreen-podcast.s3-us-west-2.amazonaws.com/evergreen067.mp3
+audioUrl: https://podtema.com/media/evergreen/evergreen067.mp3
 ---
 
 [Поддержи подкаст!](https://patreon.com/podtema)

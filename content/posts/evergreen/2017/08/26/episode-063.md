@@ -3,7 +3,7 @@ title: "Episode #063"
 date: "2017-08-26"
 cover: 20160625_134157-1.jpg
 description: В гостях редкий, если не сказать уникальный гость. Никогда такого не было, и вот опять! 
-audioUrl: https://evergreen-podcast.s3-us-west-2.amazonaws.com/evergreen063.mp3
+audioUrl: https://podtema.com/media/evergreen/evergreen063.mp3
 ---
 
 Поддержи подкаст: https://patreon.com/podtema
