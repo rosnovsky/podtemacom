@@ -55,10 +55,6 @@ const Bio = () => {
       />
       <p>
         Written by <strong>{author}</strong> who lives and works in Seattle, WA.
-        {` `}
-        <a href={`https://twitter.com/${social.twitter}`}>
-          
-        </a>
       </p>
     </div>
   )

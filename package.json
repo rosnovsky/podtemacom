@@ -8,6 +8,8 @@
     "url": "https://github.com/rosnovsky/podtemacom/issues"
   },
   "dependencies": {
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
     "gatsby": "^2.13.31",
     "gatsby-cli": "^2.7.29",
     "gatsby-image": "^2.2.6",
@@ -38,7 +40,12 @@
     "typography-theme-wordpress-2016": "^0.16.19"
   },
   "devDependencies": {
-    "prettier": "^1.18.2"
+    "babel-jest": "^24.9.0",
+    "babel-preset-gatsby": "^0.2.8",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^24.9.0",
+    "prettier": "^1.18.2",
+    "react-test-renderer": "^16.8.6"
   },
   "homepage": "https://podtema.com",
   "keywords": [
@@ -56,6 +63,6 @@
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+    "test": "jest"
   }
 }
