@@ -1,6 +1,6 @@
 import React from "react"
 import ReactDOM from "react-dom"
-import renderer from "react-test-renderer"
+import { render } from "@testing-library/react"
 
 import Bio from "../bio"
 import { useStaticQuery } from "gatsby"
@@ -22,17 +22,25 @@ beforeEach(() => {
       site: {
         siteMetadata: {
           author: `Mock author`,
-          social: {
-            twitter: "mockhandle",
-          },
         },
       },
     }
   })
 })
 
-it("renders without crashing", () => {
-  const div = document.createElement("div")
-  ReactDOM.render(<Bio />, div)
-  ReactDOM.unmountComponentAtNode(div)
+describe("Bio Component", () => {
+  it("renders without crashing", () => {
+    const div = document.createElement("div")
+    ReactDOM.render(<Bio />, div)
+    ReactDOM.unmountComponentAtNode(div)
+  })
+
+  it("renders correctly", () =>{
+    const bio = render(<Bio />)
+    expect(bio).toMatchSnapshot()
+
+  })
+
+
+
 })
