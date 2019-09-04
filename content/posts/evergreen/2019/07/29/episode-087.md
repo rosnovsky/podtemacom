@@ -3,7 +3,7 @@ title: "Episode #087"
 date: "2019-07-29T22:12:03.284Z"
 cover: cropped-IMG_5809.jpeg
 description: Подкаст из такого неожиданного, но такого привычного места, где я не записывал подкасты года, наверное, два.
-source: https://podtema.com/media/evergreen/evergreen087.mp3
+audioUrl: https://podtema.com/media/evergreen/evergreen087.mp3
 type: "podcast"
 size: 87
 time: 59

@@ -54,7 +54,7 @@ const Bio = () => {
         }}
       />
       <p>
-        Written by <strong>{author}</strong> who lives and works near Seattle, WA.
+        Вечнозелёный подкаст из вечнозелёного штата Вашингтон, что на Тихоокеанском Северо-Западе этих Соединённых Штатов.
       </p>
     </div>
   )
