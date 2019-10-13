@@ -71,55 +71,56 @@ module.exports = {
           return {
             ...siteMetadata,
             ...rest,
-            description: "От автора Rosnovsky Park™ Weekly и Rosnovsky in Canada! Самый аутентичный подкаст на русском языке! Evergreen Podcast: Смотри ушами. Легендарный ведущий старейших подкастов на русском языке представляет третью серию подкастов — Вечнозелёный подкаст из вечнозелёного штата Вашингтон, что на Тихоокеанском Северо-Западе США 🇺🇸. Путешествия, походы, природа, работа, технологии, семья, дети, деньги — всё, что волнует интересует!",
+            description:
+              'От автора Rosnovsky Park™ Weekly и Rosnovsky in Canada! Самый аутентичный подкаст на русском языке! Evergreen Podcast: Смотри ушами. Легендарный ведущий старейших подкастов на русском языке представляет третью серию подкастов — Вечнозелёный подкаст из вечнозелёного штата Вашингтон, что на Тихоокеанском Северо-Западе США 🇺🇸. Путешествия, походы, природа, работа, технологии, семья, дети, деньги — всё, что волнует интересует!',
             custom_namespaces: {
-              'itunes': 'http://www.itunes.com/dtds/podcast-1.0.dtd',
+              itunes: 'http://www.itunes.com/dtds/podcast-1.0.dtd',
             },
             custom_elements: [
               {
                 'itunes:image': {
                   _attr: {
-                    href: `${siteMetadata.siteUrl}cover.png`
-                  }
+                    href: `${siteMetadata.siteUrl}cover.png`,
+                  },
+                },
+                'itunes:owner': {
+                  'itunes:name': 'Artem Rosnovsky',
+                  'itunes:email': 'artem@rosnovsky.us',
                 },
 
-                "itunes:owner":
-                {
-                  "itunes:name": "Artem Rosnovsky",
-                  "itunes:email": "artem@rosnovsky.us"
-                },
+                'itunes:category': 'Personal Journals',
+                'itunes:category': 'Places & Travel',
+                'itunes:category': 'Society & Culture',
 
-                "itunes:category": "Personal Journals",
-                "itunes:category": "Places & Travel",
-                "itunes:category": "Society & Culture",
-
-                "itunes:keywords": "США, Канада, иммиграция, истории, Вашингтон, Орегон, росновский",
-                "itunes:explicit": "clean",
-                "itunes:language": "ru-RU",
-                "itunes:author": "Artem Rosnovsky",
-                "itunes:email": "artem@rosnovsky.us",
-                "itunes:summary": "От автора Rosnovsky Park™ Weekly и Rosnovsky in Canada! Самый аутентичный подкаст на русском языке! Evergreen Podcast: Смотри ушами. Легендарный ведущий старейших подкастов на русском языке представляет третью серию подкастов — Вечнозелёный подкаст из вечнозелёного штата Вашингтон, что на Тихоокеанском Северо-Западе США 🇺🇸. Путешествия, походы, природа, работа, технологии, семья, дети, деньги — всё, что волнует интересует!",
-                "itunes:subtitle": "From Pacific Northwest to the World"
-              }
-            ]
-          }
+                'itunes:keywords':
+                  'США, Канада, иммиграция, истории, Вашингтон, Орегон, росновский',
+                'itunes:explicit': 'clean',
+                'itunes:language': 'ru-RU',
+                'itunes:author': 'Artem Rosnovsky',
+                'itunes:email': 'artem@rosnovsky.us',
+                'itunes:summary':
+                  'От автора Rosnovsky Park™ Weekly и Rosnovsky in Canada! Самый аутентичный подкаст на русском языке! Evergreen Podcast: Смотри ушами. Легендарный ведущий старейших подкастов на русском языке представляет третью серию подкастов — Вечнозелёный подкаст из вечнозелёного штата Вашингтон, что на Тихоокеанском Северо-Западе США 🇺🇸. Путешествия, походы, природа, работа, технологии, семья, дети, деньги — всё, что волнует интересует!',
+                'itunes:subtitle': 'From Pacific Northwest to the World',
+              },
+            ],
+          };
         },
         feeds: [
           {
             serialize: ({ query: { site, allMarkdownRemark } }) => {
               return allMarkdownRemark.edges.map(edge => {
-                const siteUrl = site.siteMetadata.siteUrl
+                const siteUrl = site.siteMetadata.siteUrl;
                 const postText = `
                 <div style="margin-top=55px; font-style: italic;">(This is a blog post I've posted at rosnovsky.us. You can read it <a href="${siteUrl +
                   edge.node.fields.slug}">here</a>.)</div>
-              `
+              `;
 
-                let html = edge.node.html
+                let html = edge.node.html;
                 html = html
                   .replace(/href="\//g, `href="${siteUrl}/`)
                   .replace(/src="\//g, `src="${siteUrl}/`)
                   .replace(/"\/static\//g, `"${siteUrl}/static/`)
-                  .replace(/,\s*\/static\//g, `,${siteUrl}/static/`)
+                  .replace(/,\s*\/static\//g, `,${siteUrl}/static/`);
 
                 return Object.assign({}, edge.node.frontmatter, {
                   description: edge.node.frontmatter.description,
@@ -127,8 +128,8 @@ module.exports = {
                   url: site.siteMetadata.siteUrl + edge.node.fields.slug,
                   guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
                   custom_elements: [{ 'content:encoded': html + postText }],
-                })
-              })
+                });
+              });
             },
 
             query: `
@@ -161,13 +162,13 @@ module.exports = {
           {
             serialize: ({ query: { site, allMarkdownRemark } }) => {
               return allMarkdownRemark.edges.map(edge => {
-                const siteUrl = site.siteMetadata.siteUrl
-                let html = edge.node.html
+                const siteUrl = site.siteMetadata.siteUrl;
+                let html = edge.node.html;
                 html = html
                   .replace(/href="\//g, `href="${siteUrl}/`)
                   .replace(/src="\//g, `src="${siteUrl}/`)
                   .replace(/"\/static\//g, `"${siteUrl}/static/`)
-                  .replace(/,\s*\/static\//g, `,${siteUrl}/static/`)
+                  .replace(/,\s*\/static\//g, `,${siteUrl}/static/`);
 
                 return Object.assign({}, edge.node.frontmatter, {
                   title: edge.node.frontmatter.title,
@@ -176,18 +177,22 @@ module.exports = {
                   date: edge.node.frontmatter.date,
                   lat: 47.84311, //optional latitude field for GeoRSS
                   long: -122.204579, //optional longitude field for GeoRSS
-                  enclosure: { url: edge.node.frontmatter.source, size: edge.node.frontmatter.size * 1048576, type: "audio/mp3" },
+                  enclosure: {
+                    url: edge.node.frontmatter.source,
+                    size: edge.node.frontmatter.size * 1048576,
+                    type: 'audio/mp3',
+                  },
                   custom_elements: [
                     {
                       'itunes:duration': edge.node.frontmatter.time * 60,
-                      "content:encoded": html,
-                      "itunes:episode": edge.node.frontmatter.episode,
-                      "itunes:episodeType": edge.node.frontmatter.episodeType,
-                      "itunes:author": "Artem Rosnovsky",
-                    }
-                  ]
-                })
-              })
+                      'content:encoded': html,
+                      'itunes:episode': edge.node.frontmatter.episode,
+                      'itunes:episodeType': edge.node.frontmatter.episodeType,
+                      'itunes:author': 'Artem Rosnovsky',
+                    },
+                  ],
+                });
+              });
             },
 
             query: `
@@ -256,4 +261,4 @@ module.exports = {
       },
     },
   ],
-}
+};
