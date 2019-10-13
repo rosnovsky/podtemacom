@@ -216,7 +216,7 @@ module.exports = {
                         title
                         date(formatString: "MMMM DD, YYYY")
                         type
-                        source
+                        audioURL
                         cover {publicURL}
                         time
                         size
