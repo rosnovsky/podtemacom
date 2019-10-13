@@ -35,12 +35,8 @@ describe("Bio Component", () => {
     ReactDOM.unmountComponentAtNode(div)
   })
 
-  it("renders correctly", () =>{
+  it("renders correctly", () => {
     const bio = render(<Bio />)
     expect(bio).toMatchSnapshot()
-
   })
-
-
-
 })

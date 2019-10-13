@@ -5,28 +5,28 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
-import Pagination from "../components/pagination";
+import Pagination from "../components/pagination"
 
 class BlogIndex extends React.Component {
-  constructor(props){
-    super(props);
+  constructor(props) {
+    super(props)
     const { data } = this.props
     this.state = {
       pageOfItems: [],
-      items: data.allMarkdownRemark.edges
+      items: data.allMarkdownRemark.edges,
     }
-    this.onChangePage = this.onChangePage.bind(this);
+    this.onChangePage = this.onChangePage.bind(this)
   }
-  
+
   onChangePage(pageOfItems) {
     // update state with new page of items
-    this.setState({ pageOfItems: pageOfItems });
+    this.setState({ pageOfItems: pageOfItems })
   }
 
   render() {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
-    const { pageOfItems } = this.state;
+    const { pageOfItems } = this.state
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -45,22 +45,38 @@ class BlogIndex extends React.Component {
                   {title}
                 </Link>
               </h3>
-              <small>{Intl.DateTimeFormat('ru-RU', { year: 'numeric', month: 'long', day: 'numeric' }).format(new Date(node.frontmatter.date))}</small>
+              <small>
+                {Intl.DateTimeFormat("ru-RU", {
+                  year: "numeric",
+                  month: "long",
+                  day: "numeric",
+                }).format(new Date(node.frontmatter.date))}
+              </small>
               <div
                 dangerouslySetInnerHTML={{
-                  __html: node.frontmatter.audioUrl ? `<img src="${node.frontmatter.cover.publicURL}" /><br/><audio
+                  __html: node.frontmatter.audioUrl
+                    ? `<img src="${node.frontmatter.cover.publicURL}" /><br/><audio
                   style=
                     "width: 100%;"
                   preload="true"
-                  controls src="${node.frontmatter.audioUrl}" /><br/>` : `<img src="${node.frontmatter.cover.publicURL}" /><br/>`
-                }} />
-                <p dangerouslySetInnerHTML={{__html: node.frontmatter.description || node.html }}
+                  controls src="${node.frontmatter.audioUrl}" /><br/>`
+                    : `<img src="${node.frontmatter.cover.publicURL}" /><br/>`,
+                }}
+              />
+              <p
+                dangerouslySetInnerHTML={{
+                  __html: node.frontmatter.description || node.html,
+                }}
               />
             </div>
           )
         })}
         <div>
-          <Pagination style={{margin: "0 auto"}} items={this.state.items} onChangePage={this.onChangePage} />
+          <Pagination
+            style={{ margin: "0 auto" }}
+            items={this.state.items}
+            onChangePage={this.onChangePage}
+          />
           <br />
           <br />
         </div>
@@ -89,7 +105,9 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             title
             description
-            cover {publicURL}
+            cover {
+              publicURL
+            }
             audioUrl
           }
         }

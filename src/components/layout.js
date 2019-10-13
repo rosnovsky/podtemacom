@@ -34,7 +34,7 @@ class Layout extends React.Component {
       header = (
         <h3
           style={{
-            fontFamily: 'Open Sans, serif',
+            fontFamily: "Open Sans, serif",
             marginTop: 0,
           }}
         >
@@ -53,24 +53,24 @@ class Layout extends React.Component {
     }
     return (
       <>
-      <div
-        style={{
-          marginLeft: `auto`,
-          marginRight: `auto`,
-          maxWidth: rhythm(24),
-          padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-        }}
-      >
-        <header>{header}</header>
-        <main>{children}</main>
-        
-        <footer>
-          © 2006-{new Date().getFullYear()}
-          {` `}
-          <a href="https://rosnovsky.us">Rosnovsky Park™</a>
-        </footer>
-      </div>
-    </>
+        <div
+          style={{
+            marginLeft: `auto`,
+            marginRight: `auto`,
+            maxWidth: rhythm(24),
+            padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
+          }}
+        >
+          <header>{header}</header>
+          <main>{children}</main>
+
+          <footer>
+            © 2006-{new Date().getFullYear()}
+            {` `}
+            <a href="https://rosnovsky.us">Rosnovsky Park™</a>
+          </footer>
+        </div>
+      </>
     )
   }
 }
