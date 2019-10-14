@@ -55,8 +55,8 @@ class Layout extends React.Component {
       <>
         <div
           style={{
-            marginLeft: 'auto',
-            marginRight: 'auto',
+            marginLeft: `auto`,
+            marginRight: `auto`,
             maxWidth: rhythm(24),
             padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
           }}
@@ -65,7 +65,8 @@ class Layout extends React.Component {
           <main>{children}</main>
 
           <footer>
-            © 2006-{new Date().getFullYear()}{' '}
+            © 2006-{new Date().getFullYear()}
+            {` `}
             <a href="https://rosnovsky.us">Rosnovsky Park™</a>
           </footer>
         </div>
