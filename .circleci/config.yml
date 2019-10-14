@@ -22,7 +22,4 @@ workflows:
   version: 2
   tests:
     jobs:
-      - linter:
-          filters:
-            branches:
-              ignore: master
+      - linter
