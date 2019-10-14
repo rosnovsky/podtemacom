@@ -69,7 +69,9 @@
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "test": "jest && codecov"
+    "test": "jest && codecov",
+    "lint": "eslint src/**/*.js",
+    "lint:fix": "eslint --fix *.js src/**/*.js"
   },
   "jest": {
     "coverageDirectory": "./coverage/",
