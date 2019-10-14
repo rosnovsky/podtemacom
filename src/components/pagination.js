@@ -14,7 +14,7 @@ class Pagination extends React.Component {
     this.setPage = this.setPage.bind(this);
   }
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     if (this.props.items && this.props.items.length) {
       this.setPage(this.props.initialPage);
     }
