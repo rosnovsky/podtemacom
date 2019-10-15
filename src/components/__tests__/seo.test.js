@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { render } from '@testing-library/react';
 
-import Bio from '../bio';
+import Seo from '../seo';
 import { useStaticQuery } from 'gatsby';
 
 beforeEach(() => {
@@ -31,12 +31,12 @@ beforeEach(() => {
 describe('Bio Component', () => {
   it('renders without crashing', () => {
     const div = document.createElement('div');
-    ReactDOM.render(<Bio />, div);
+    ReactDOM.render(<Seo title="Test" />, div);
     ReactDOM.unmountComponentAtNode(div);
   });
 
   it('renders correctly', () => {
-    const bio = render(<Bio />);
-    expect(bio).toMatchSnapshot();
+    const seo = render(<Seo title="Test" />);
+    expect(seo).toMatchSnapshot();
   });
 });

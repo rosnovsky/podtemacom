@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, useStaticQuery, graphql } from 'gatsby';
+import { Link, graphql } from 'gatsby';
 
 import Bio from '../components/bio';
 import Layout from '../components/layout';
@@ -87,7 +87,7 @@ class BlogIndex extends React.Component {
 
 export default BlogIndex;
 
-export const pageQuery = useStaticQuery(graphql`
+export const pageQuery = graphql`
   query {
     site {
       siteMetadata {
@@ -114,4 +114,4 @@ export const pageQuery = useStaticQuery(graphql`
       }
     }
   }
-`);
+`;
