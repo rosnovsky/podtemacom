@@ -77,6 +77,17 @@ describe('Pagination Component', () => {
     ReactDOM.unmountComponentAtNode(div);
   });
 
+  it('doesn\'t break on empty page', () => {
+    const div = document.createElement('div');
+    const onChangePage = items => null;
+    const items = [];
+    ReactDOM.render(
+      <Pagination items={items} onChangePage={onChangePage} />,
+      div
+    );
+    ReactDOM.unmountComponentAtNode(div);
+  });
+
   it('renders correctly', () => {
     const onChangePage = items => null;
 
