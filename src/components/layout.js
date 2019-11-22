@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import { isAuthenticated, logout } from '../utils/auth';
 
 import { rhythm, scale } from '../utils/typography';
 
@@ -65,6 +66,22 @@ class Layout extends React.Component {
           <main>{children}</main>
 
           <footer>
+            {isAuthenticated() ? (
+              <>
+                <Link to="/account">Account</Link>{' '}
+                <a
+                  href="#logout"
+                  onClick={e => {
+                    logout();
+                    e.preventDefault();
+                  }}
+                >
+                  Log Out
+                </a>
+              </>
+            ) : (
+              <Link to="/account">Account</Link>
+            )}{' '}
             © 2006-{new Date().getFullYear()}
             {` `}
             <a href="https://rosnovsky.us">Rosnovsky Park™</a>
