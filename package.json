@@ -47,7 +47,6 @@
     "typography-theme-wordpress-2016": "^0.16.19"
   },
   "devDependencies": {
-    "@fortawesome/fontawesome-pro": "^5.11.2",
     "@testing-library/jest-dom": "^4.1.2",
     "@testing-library/react": "^9.3.0",
     "babel-jest": "^24.9.0",
