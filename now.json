@@ -1,0 +1,7 @@
+{
+    "env": {
+        "AUTH0_DOMAIN":"@auth0_domain",
+        "AUTH0_CLIENTID": "@auth0_clientid",
+        "AUTH0_CALLBACK": "@auth0_callback"
+    }
+}
