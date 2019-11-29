@@ -7,17 +7,17 @@ import SEO from "../components/seo"
 import Profile from "../components/Profile"
 import { rhythm } from "../utils/typography"
 
-const Account = (props) => {
-    const siteTitle = props.data.site.siteMetadata.title;
-    return (
-        <Layout location={props.location} title={siteTitle}>
-            <SEO title="Account" />
-            <Profile />
-        </Layout>
-    )
+const Account = props => {
+  const siteTitle = props.data.site.siteMetadata.title
+  return (
+    <Layout location={props.location} title={siteTitle}>
+      <SEO title="Account" />
+      <Profile />
+    </Layout>
+  )
 }
 
-export default Account;
+export default Account
 
 export const pageQuery = graphql`
   query {

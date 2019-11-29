@@ -1,13 +1,14 @@
 {
-  "name": "gatsby-starter-blog",
+  "name": "evergreen-exclusive-content",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
+  "description": "Evergreen podcast patron-only content",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Artem Rosnovsky <artem@rosnovsky.us>",
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/rosnovsky/podtemacom/issues"
   },
   "dependencies": {
+    "eslint-plugin-prettier": "^3.1.1",
     "gatsby": "^2.18.4",
     "gatsby-image": "^2.2.34",
     "gatsby-plugin-feed": "^2.3.22",
@@ -38,7 +39,7 @@
   "devDependencies": {
     "prettier": "^1.19.1"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
+  "homepage": "https://github.com/rosnovsky/podtemacom",
   "keywords": [
     "gatsby"
   ],
@@ -46,7 +47,7 @@
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
+    "url": "git+https://github.com/rosnovsky/podtemacom.git"
   },
   "scripts": {
     "build": "gatsby build",
