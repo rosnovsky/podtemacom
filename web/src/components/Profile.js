@@ -1,9 +1,9 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
-import { rhythm } from "../utils/typography"
+import React from 'react';
+import { Link, graphql } from 'gatsby';
+import { rhythm } from '../utils/typography';
 
 export const Profile = () => {
-  return "Profile"
-}
+  return 'Profile';
+};
 
-export default Profile
+export default Profile;
