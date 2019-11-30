@@ -7,6 +7,10 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: `gatsby-plugin-create-client-paths`,
+      options: { prefixes: [`/account/*`] },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/content/blog`,

@@ -51,6 +51,7 @@ const setSession = (cb = () => {}) => (err, authResult) => {
     tokens.expiresAt = expiresAt;
     user = authResult.idTokenPayload;
     localStorage.setItem('isLoggedIn', true);
+    localStorage.setItem('user', JSON.stringify(user));
     navigate('/account');
     cb();
   }
@@ -65,7 +66,8 @@ export const handleAuthentication = () => {
 };
 
 export const getProfile = () => {
-  return user;
+  console.log(localStorage.getItem(user))
+  return localStorage.getItem(user);
 };
 
 export const silentAuth = callback => {
@@ -75,5 +77,6 @@ export const silentAuth = callback => {
 
 export const logout = () => {
   localStorage.setItem('isLoggedIn', false);
+  localStorage.setItem('user', null);
   auth.logout();
 };

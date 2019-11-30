@@ -9,14 +9,17 @@ import { login, logout, isAuthenticated, getProfile } from '../utils/auth';
 import { rhythm } from '../utils/typography';
 
 const Account = props => {
-  const siteTitle = props.data.site.siteMetadata.title;
+	const siteTitle = props.data.site.siteMetadata.title;
+	
+	let user;
 
   if (!isAuthenticated()) {
     login();
     return <p>Redirecting to login...</p>;
-  }
+  }else{
+		user = JSON.parse(localStorage.getItem('user'));
+	}
 
-  const user = getProfile();
 
   return (
     <Layout location={props.location} title={siteTitle}>

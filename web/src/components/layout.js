@@ -1,14 +1,20 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import { login, logout, isAuthenticated, getProfile } from '../utils/auth';
+import { logout, isAuthenticated, getProfile } from '../utils/auth';
 
 import { rhythm, scale } from '../utils/typography';
 
 const Layout = props => {
-  const user = getProfile();
   const { location, title, children } = props;
   const rootPath = `${__PATH_PREFIX__}/`;
   let header;
+  let user;
+
+  if (!isAuthenticated()) {
+    user = null;
+  }else{
+		user = JSON.parse(localStorage.getItem('user'));
+	}
 
   if (location.pathname === rootPath) {
     header = (
@@ -33,7 +39,7 @@ const Layout = props => {
         </h1>
         <nav>
           <Link to={`/account`}>Account</Link>
-          {user.name ? (
+          {user !== null ?
             <>
               <Link to="/account/settings">Settings</Link>
               <Link to="/account/billing">Billing</Link>
@@ -46,10 +52,8 @@ const Layout = props => {
               >
                 Log Out
               </a>
-            </>
-          ) : (
-            ''
-          )}
+            </> : ''
+          }
         </nav>
       </>
     );

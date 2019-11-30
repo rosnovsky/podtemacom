@@ -1,15 +1,8 @@
 const path = require(`path`);
 const { createFilePath } = require(`gatsby-source-filesystem`);
 
-exports.createPages = async ({ graphql, actions, page }) => {
+exports.createPages = async ({ graphql, actions, }) => {
   const { createPage } = actions;
-
-  if (page.path.match(/^\/account/)) {
-    page.matchPath = '/account/*';
-
-    // Update the page.
-    createPage(page);
-  }
 
   const blogPost = path.resolve(`./src/templates/blog-post.js`);
   const result = await graphql(
