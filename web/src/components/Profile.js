@@ -1,9 +1,12 @@
 import React from 'react';
-import { Link, graphql } from 'gatsby';
-import { rhythm } from '../utils/typography';
 
-export const Profile = () => {
-  return 'Profile';
+export const Profile = ({ user }) => {
+  return (
+    <>
+      <p>Hi {user.name}!</p>
+      <img src={user.picture} />
+    </>
+  );
 };
 
 export default Profile;
