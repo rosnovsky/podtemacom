@@ -1,6 +1,18 @@
 <script>
 	import Posts from './Posts.svelte';
-	export let name;
+	import Login from './Login.svelte'
+
+	import { isAuthenticated } from './store.js';
+
+	import ApolloClient from 'apollo-boost';  
+	import { setClient } from 'svelte-apollo';
+
+	import createAuth0Client from '@auth0/auth0-spa-js';
+
+	const client = new ApolloClient({ uri: 'https://h3yilaad.api.sanity.io/v1/graphql/production/default' });
+	setClient(client);
+
+	
 </script>
 
 <style>
@@ -27,5 +39,8 @@
 
 <main>
 	<h1>Evergreen Exclusive Content</h1>
-	<Posts />
+	{#if $isAuthenticated}
+		<Posts />
+	{/if}
+	<Login />
 </main>
