@@ -53,7 +53,7 @@ const setSession = (cb = () => {}) => (err, authResult) => {
         localStorage.setItem("isLoggedIn", true)
         localStorage.setItem("user", JSON.stringify(userPayload));
         user.set(userPayload)
-        console.log("Authenticated", userPayload)
+        window.location = '/'
         cb()
     }
 }

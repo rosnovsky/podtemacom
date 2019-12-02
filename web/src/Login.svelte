@@ -4,9 +4,7 @@
 
     import { login, logout, handleAuthentication, isAuthenticated, getProfile } from "./auth"
 
-        getProfile() ? user.set(getProfile()) : handleAuthentication();
-
-    
+    getProfile() ? user.set(getProfile()) : handleAuthentication();
 </script>
 
 {#if $user}
