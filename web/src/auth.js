@@ -7,7 +7,7 @@ const auth = isBrowser
     ? new auth0.WebAuth({
         domain: "rosnovsky.auth0.com",
         clientID: '56CVFXGTxGzffHxOxwGsQxoXQoirrgdC',
-        redirectUri: 'http://web.rosnovsky.now.sh',
+        redirectUri: 'https://web.rosnovsky.now.sh',
         responseType: "token id_token",
         scope: "openid profile email",
         })
