@@ -1,23 +1,18 @@
 <script>
-import {isAuthenticated} from './store'
+    import { onMount, beforeUpdate } from 'svelte';
+    import {user} from './store'
 
-const login = async () => {
-    isAuthenticated.set(true)
-    localStorage.setItem('isAuthenticated', true)
-    console.log($isAuthenticated)
-};
+    import { login, logout, handleAuthentication, isAuthenticated, getProfile } from "./auth"
 
-const logout = async () => {
-    isAuthenticated.set(false)
-    localStorage.setItem('isAuthenticated', false)
-    console.log($isAuthenticated)
-};
+        getProfile() ? user.set(getProfile()) : handleAuthentication();
+
+    
 </script>
 
-{#if $isAuthenticated}
-<button on:click={logout}>Logout
-</button>
-{:else}
-<button on:click={login}>Login
-</button>
+{#if $user}
+    <button on:click={logout}>Logout
+    </button>
+    {:else}
+    <button on:click={login}>Login
+    </button>
 {/if}
