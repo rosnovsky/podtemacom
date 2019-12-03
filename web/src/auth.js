@@ -1,5 +1,6 @@
 import auth0 from "auth0-js"
 import { user } from './store'
+import 'whatwg-fetch';
 
 const isBrowser = typeof window !== "undefined"
 
@@ -54,7 +55,7 @@ const setSession =  (cb = () => {}) => async (err, authResult) => {
         localStorage.setItem("user", JSON.stringify(userPayload));
         const url = '/api/test';
         try {
-            const response = await fetch(url, {
+            const response = await window.fetch(url, {
                 method: 'POST', // or 'PUT'
                 body: JSON.stringify(userPayload),
                 headers: {
@@ -63,7 +64,6 @@ const setSession =  (cb = () => {}) => async (err, authResult) => {
             });
 
             const json = await response
-            console.log('Success:', json);
         } catch (error) {
             console.error('Error:', error);
         }

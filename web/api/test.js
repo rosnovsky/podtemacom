@@ -22,14 +22,16 @@ module.exports = async (req, res) => {
         console.log("no body")
         return;
     }
+
+    const body = req.body
     
-    const emailHash = md5(req.body.email);
+    const emailHash = body.email ? md5(body.email): null;
+    const userSub = body.sub ? body.sub.split("|")[0] : null;
     const writeUserData = async () => {
         const timestamp = new Date().toLocaleString("en-US", {timeZone: "America/Vancouver"});
-        const userSub = req.body.sub;
-        const db = await database.ref(`users/${emailHash}/${userSub}`).set({
+        const db = await database.ref(`users/${emailHash ? emailHash : uuid()}/${userSub ? userSub : uuid()}`).set({
                 timestamp: timestamp,
-                user: req.body
+                user: body
             }
         );
         const response = await db;

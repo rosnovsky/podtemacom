@@ -38,7 +38,7 @@
 <main>
 	<h1>Evergreen Exclusive Content</h1>
 	{#if $user}
-		<h6>Hi {$user.name}!</h6>
+		<div><img src={$user.picture} height='20px' alt="{$user.name} avatar"/> Hi {$user.name}! Thanks for logging in in with your {$user.sub.split("|")[0]} account.</div>
 		<Posts />
 	{/if}
 	<Login />
