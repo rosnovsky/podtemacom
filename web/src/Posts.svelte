@@ -19,11 +19,13 @@
 
 </script>
 
-<h3>Posts!</h3>
+<h3>Posts</h3>
 {#await $posts}
     <li>Loading...</li>
     {:then result}
-        <Post posts={result.data.allPosts} />
+    {#each result.data.allPosts as post}
+        <Post post={post} />
+    {/each}
     {:catch error}
-        <li>Error loading books: {error}</li>
+        <li>Error loading posts: {error}</li>
     {/await}

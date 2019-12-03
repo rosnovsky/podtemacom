@@ -38,7 +38,7 @@ export const login = async () => {
     
 }
 
-const setSession = (cb = () => {}) => (err, authResult) => {
+const setSession =  (cb = () => {}) => async (err, authResult) => {
     if (err) {
         cb()
         return
@@ -52,7 +52,22 @@ const setSession = (cb = () => {}) => (err, authResult) => {
         userPayload = authResult.idTokenPayload;
         localStorage.setItem("isLoggedIn", true)
         localStorage.setItem("user", JSON.stringify(userPayload));
-        user.set(userPayload)
+        const url = '/api/test';
+        try {
+            const response = await fetch(url, {
+                method: 'POST', // or 'PUT'
+                body: JSON.stringify(userPayload),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            });
+
+            const json = await response
+            console.log('Success:', json);
+        } catch (error) {
+            console.error('Error:', error);
+        }
+        user.set(userPayload);
         window.location = '/'
         cb()
     }
@@ -72,7 +87,12 @@ export const handleAuthentication = () => {
 
 export const getProfile = () => {
     const user = localStorage.getItem('user')
-    return user ? JSON.parse(user) : null;
+    if(user === 'null'){
+        return null;
+    }else{
+        return JSON.parse(user);
+    }
+
 }
 
 export const logout = () => {
@@ -80,4 +100,9 @@ export const logout = () => {
     localStorage.setItem("user", null);
     user.set(null);
     auth.logout();
+}
+
+export const updateDBUser = (user) => {
+    console.log(user)
+    
 }

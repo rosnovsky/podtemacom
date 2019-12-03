@@ -1,11 +1,6 @@
 <script>
-export let posts;
-console.log(posts)
+export let post;
 
 </script>
 
-<ul>
-{#each posts as post}
-    <li>{post.title}</li>
-{/each}
-</ul>
+<h1>{post.title}</h1>

@@ -38,7 +38,7 @@
 <main>
 	<h1>Evergreen Exclusive Content</h1>
 	{#if $user}
-		<h6>Only for {$user.name}!</h6>
+		<h6>Hi {$user.name}!</h6>
 		<Posts />
 	{/if}
 	<Login />

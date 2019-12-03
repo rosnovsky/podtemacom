@@ -1,14 +1,14 @@
-const fetch = require('node-fetch');
-const admin = require("firebase-admin");
-const uuid = require('uuid/v4')
 const firebase = require("firebase");
 const md5 = require('js-md5')
+const uuid = require('uuid/v4')
+
+
 
 const config = {
-    apiKey: process.env.API_KEY,
-    authDomain: process.env.AUTH_DOMAIN,
-    databaseURL: process.env.DATABASE_URL,
-    storageBucket: process.env.STORAGE_BUCKET
+    apiKey: 'AIzaSyAt0nTeWiPB3ZHbmgJXIafSsEpllLNcz0A',
+    authDomain: 'firebase-test.firebaseapp.com',
+    databaseURL: 'https://fir-test-7f702.firebaseio.com/',
+    storageBucket: 'fir-test-7f702.appspot.com.appspot.com'
     };
 
     firebase.initializeApp(config);
@@ -16,22 +16,27 @@ const config = {
   // Get a reference to the database service
 const database = firebase.database();
 
-
 module.exports = async (req, res) => {
-    const timestamp = new Date().toLocaleString("en-US", {timeZone: "America/Vancouver"});
-    const date = new Date(timestamp).toLocaleDateString("en-US");
 
-    const testData = async () => database.ref('/log').once('value').then(snapshot => snapshot.val());
-
+    if(req.body === null){
+        console.log("no body")
+        return;
+    }
+    
     const emailHash = md5(req.body.email);
-    const writeVisitorData = (date) => {
-        firebase.database().ref(`log/${emailHash}`).set({
-                timestamp: date,
-                user: req.body ? req.body : "no user"
+    const writeUserData = async () => {
+        const timestamp = new Date().toLocaleString("en-US", {timeZone: "America/Vancouver"});
+        const userSub = req.body.sub;
+        const db = await database.ref(`users/${emailHash}/${userSub}`).set({
+                timestamp: timestamp,
+                user: req.body
             }
         );
+        const response = await db;
+        return response
     }
-    const data = await testData();
-    const result = await writeVisitorData(date);
-    res.json({ "Today": date, 'data': data, result: result })
+
+    const data = await writeUserData();
+
+    res.json({"Status": data})
 }
