@@ -7,7 +7,7 @@ const isBrowser = typeof window !== "undefined"
 
 const auth: auth0.WebAuth = isBrowser
     ? new auth0.WebAuth({
-        domain: "rosnovsky.auth0.com",
+        domain: "auth0.rosnovsky.us",
         clientID: '56CVFXGTxGzffHxOxwGsQxoXQoirrgdC',
         redirectUri: 'https://web.rosnovsky.now.sh',
         responseType: "token id_token",
