@@ -7,8 +7,8 @@ const isBrowser = typeof window !== "undefined"
 
 const auth = isBrowser
     ? new auth0.WebAuth({
-        domain: "auth.rosnovsky.us",
-        clientID: '56CVFXGTxGzffHxOxwGsQxoXQoirrgdC',
+        domain: "rosnovsky-tenant1.auth0.com",
+        clientID: 'QsLVr41I83f70GtVMWfC1M8WMgP4yDio',
         redirectUri: 'https://web.rosnovsky.now.sh',
         responseType: "token id_token",
         scope: "openid profile email",
@@ -99,7 +99,7 @@ export const logout = () => {
     localStorage.setItem("isLoggedIn", null);
     localStorage.setItem("user", null);
     user.set(null);
-    auth.logout({returnTo: 'https://web.rosnovsky.now.sh'});
+    auth.logout({federated: "https://auth.rosnovsky.us/v2/logout?federated", returnTo: 'https://web.rosnovsky.now.sh'});
 }
 
 export const updateDBUser = (user) => {

@@ -7,8 +7,8 @@ const isBrowser = typeof window !== "undefined"
 
 const auth: auth0.WebAuth = isBrowser
     ? new auth0.WebAuth({
-        domain: "auth0.rosnovsky.us",
-        clientID: '56CVFXGTxGzffHxOxwGsQxoXQoirrgdC',
+        domain: "auth.rosnovsky.us",
+        clientID: 'QsLVr41I83f70GtVMWfC1M8WMgP4yDio',
         redirectUri: 'https://web.rosnovsky.now.sh',
         responseType: "token id_token",
         scope: "openid profile email",
