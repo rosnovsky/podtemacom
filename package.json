@@ -10,7 +10,7 @@
   "dependencies": {
     "@babel/preset-env": "7.7.6",
     "@reach/router": "1.2.1",
-    "auth0-js": "9.11.3",
+    "auth0-js": "9.13.2",
     "codecov": "3.6.1",
     "eslint-config-prettier": "6.7.0",
     "eslint-plugin-prettier": "3.1.1",
