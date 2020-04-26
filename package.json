@@ -50,7 +50,7 @@
     "babel-preset-gatsby": "0.2.22",
     "identity-obj-proxy": "3.0.0",
     "jest": "24.9.0",
-    "prettier": "1.19.1"
+    "prettier": "2.0.5"
   },
   "homepage": "https://podtema.com",
   "keywords": [
